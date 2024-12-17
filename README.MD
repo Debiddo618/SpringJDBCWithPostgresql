@@ -32,18 +32,23 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.use_sql_comments=true
 ```
 
-- Database URL: This specifies the JDBC URL to connect to the PostgreSQL database, including the hostname (localhost), port (5432), and database name (student).
-
-- Username: The username used to authenticate with the database. Here, it is set to postgres.
-
-- Password: The password used to authenticate with the database. Here, it is set to postgres.
-
+# Spring Configurations
 - Driver Class Name: This specifies the fully qualified class name of the JDBC driver used to connect to the database. For PostgreSQL, it is org.postgresql.Driver.
 
 - By default, Spring Boot applications run on port 8080. This configuration explicitly sets the port to 8080.
 
 - The context path is the base URI path at which the application is accessible. For example, if the context path is set to /path, the application will be accessible at http://localhost:8080/path
 
+- spring.datasource.driver-class-name=org.postgresql.Driver: Specifies the fully qualified class name of the JDBC driver that should be used to connect to the database. When using Spring Boot to connect to a database, you need to provide the driver class name so that Spring Boot knows which JDBC driver to use for establishing database connections.
+
+## Database Configurations
+- Database URL: This specifies the JDBC URL to connect to the PostgreSQL database, including the hostname (localhost), port (5432), and database name (student).
+
+- Username: The username used to authenticate with the database. Here, it is set to postgres.
+
+- Password: The password used to authenticate with the database. Here, it is set to postgres.
+
+## JPA and Hibernate Configurations
 - org.hibernate.dialect.PostgreSQLDialect is the dialect for PostgreSQL databases. It tells Hibernate how to generate SQL optimized for PostgreSQL. Using the correct dialect ensures that Hibernate generates appropriate SQL statements for the specific database.
 
 - spring.jpa.hibernate.ddl-auto=update: This property controls the behavior of the database schema generation. The update value means that Hibernate will attempt to update the database schema to match the entity definitions each time the application is run.
