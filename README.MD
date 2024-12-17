@@ -10,27 +10,25 @@
 1. Open resources/application.properties
 2. Add the following configurations
 
-```Java
-// Server configuration
+# Server configuration
 server.port=8080
 server.servlet.context-path=/path
 
-// Spring Boot configuration
+# Spring Boot configuration
 spring.application.name=my-spring-boot-app
 
-// Database Configuration
+# Database Configuration
 spring.datasource.url=jdbc:postgresql://localhost:5432/students
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.datasource.driver-class-name=org.postgresql.Driver
 
-// JPA/Hibernate configuration
+# JPA/Hibernate configuration
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.use_sql_comments=true
-```
 
 # Spring Configurations
 - Driver Class Name: This specifies the fully qualified class name of the JDBC driver used to connect to the database. For PostgreSQL, it is org.postgresql.Driver.
