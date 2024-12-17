@@ -10,6 +10,7 @@
 1. Open resources/application.properties
 2. Add the following configurations
 
+```Java
 # Server configuration
 server.port=8080
 server.servlet.context-path=/path
@@ -29,6 +30,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.use_sql_comments=true
+```
 
 # Spring Configurations
 - Driver Class Name: This specifies the fully qualified class name of the JDBC driver used to connect to the database. For PostgreSQL, it is org.postgresql.Driver.
